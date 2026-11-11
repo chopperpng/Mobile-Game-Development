@@ -27,9 +27,9 @@ public class orderRequirements : MonoBehaviour
     public class tapeRequirements
     {
         public bool oneTapeStrip;
-        public bool twoTapeStrip;
-        public bool fourTapeStrip;
-        public bool sixTapeStrip;
+        public bool twoTapeStrips;
+        public bool fourTapeStrips;
+        public bool sixTapeStrips;
     }
     
     // station 4, postage/labels
