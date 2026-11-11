@@ -38,13 +38,11 @@ public class orderRequirements : MonoBehaviour
     {
         public bool standardPostage;
         public bool expressPostage;
-
         public bool fragileLabel;
         public bool thisWayUpLabel;
     }
     
     [Header("order requirements")]
-    
     public boxRequirements box = new boxRequirements();
     public protectionRequirements protection = new protectionRequirements();
     public tapeRequirements tape = new tapeRequirements();

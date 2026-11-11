@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 1873172}
   - component: {fileID: 1873171}
   - component: {fileID: 1873170}
+  - component: {fileID: 1873173}
   m_Layer: 5
   m_Name: itemButton
   m_TagString: Untagged
@@ -177,7 +178,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -240,6 +241,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873168}
   m_CullTransparentMesh: 1
+--- !u!114 &1873173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fab2964ad4e4af9cbfe38782233eedf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::itemArrival
+  orderPanel: {fileID: 712641275}
+  startingPosition: {x: -1200, y: 0}
+  targetPosition: {x: 0, y: 0}
+  slideDuration: 0.8
 --- !u!1 &48622445
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,60 +497,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59341615}
   m_CullTransparentMesh: 1
---- !u!1 &67314273
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 67314275}
-  - component: {fileID: 67314274}
-  m_Layer: 0
-  m_Name: gameSceneManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &67314274
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67314273}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dd33af70696e11709941050bfb8de83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameSceneController
-  conveyorArea: {fileID: 0}
-  parcelButton: {fileID: 0}
-  slideDuration: 1.5
-  orderPanel: {fileID: 0}
-  packingPanel: {fileID: 0}
-  orderTitleText: {fileID: 0}
-  boxSizeText: {fileID: 0}
-  protectionText: {fileID: 0}
-  tapeText: {fileID: 0}
-  postageText: {fileID: 0}
---- !u!4 &67314275
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 67314273}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 690.1553, y: 203.8284, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &85341224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,4 +1399,3 @@ SceneRoots:
   - {fileID: 2051522467}
   - {fileID: 48622446}
   - {fileID: 1328400795}
-  - {fileID: 67314275}
