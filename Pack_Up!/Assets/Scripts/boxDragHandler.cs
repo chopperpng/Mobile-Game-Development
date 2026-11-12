@@ -4,10 +4,13 @@ using UnityEngine.EventSystems;
 
 public class boxDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Box Settings")]
+    [Header("station controller")]
+    public boxStationController boxController;
+    
+    [Header("box settings")]
     public string boxSize;
     
-    [Header("UI References")]
+    [Header("UI references")]
     public Canvas canvas;
     public RectTransform workTable;
     public RectTransform boxPlacementArea;
@@ -22,6 +25,8 @@ public class boxDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        boxController.beginBoxDrag();
+        
         placedBox.gameObject.SetActive(true);
         
         // move box on main canvas so can follow finger even if it moves off worktable
@@ -65,11 +70,16 @@ public class boxDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
             boxRect.anchoredPosition = boxPlacementArea.anchoredPosition;
 
             Debug.Log("Placed " + boxSize + " box.");
+            
+            boxController.placeBox(boxSize);
         }
         else
         {
             // if the player misses the target
             placedBox.gameObject.SetActive(false);
+
+            placedBox.gameObject.SetActive(false);
+            boxController.cancelBoxPlacement();
         }
 
         placedBox.raycastTarget = true;
