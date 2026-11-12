@@ -64,7 +64,7 @@ public class orderScreenController : MonoBehaviour
         if (orderRequirements.box.smallBox) return "Small";
         if (orderRequirements.box.mediumBox)  return "Medium";
         if (orderRequirements.box.largeBox)  return "Large";
-        if (orderRequirements.box.extraLargeBox)  return "ExtraLarge";
+        if (orderRequirements.box.extraLargeBox)  return "Extra Large";
 
         return "Not selected";
     }
